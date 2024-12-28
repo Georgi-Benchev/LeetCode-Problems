@@ -22,7 +22,6 @@ public class Task1493_longestSubarray {
             max = sum + lastSum;
         }
 
-
         return sum;
     }
 }
