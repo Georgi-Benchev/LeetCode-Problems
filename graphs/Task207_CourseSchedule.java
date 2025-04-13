@@ -1,6 +1,7 @@
 package graphs;
 
 import java.util.*;
+
 // beats 12% of ppl 12ms runtime 2times slower than average
 public class Task207_CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
@@ -39,7 +40,7 @@ public class Task207_CourseSchedule {
         }
         visitedNums.add(numToCheck);
 
-        List<Integer> copyConditions = conditions.get(numToCheck).stream().toList();
+        List<Integer> copyConditions = new ArrayList<>(conditions.get(numToCheck));
 
         for (int condition : copyConditions) {
             if (!conditions.get(condition).isEmpty() && isCycle(conditions, condition, visitedNums)) {

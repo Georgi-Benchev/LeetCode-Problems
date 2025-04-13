@@ -1,6 +1,7 @@
 package LeetCode75.easy;
 
 import java.util.*;
+
 // 76%
 public class Task2215_findDifference {
     public static List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
@@ -34,6 +35,6 @@ public class Task2215_findDifference {
             }
         }
 
-        return List.of(resultList1, resultList2);
+        return Arrays.asList(resultList1, resultList2);
     }
 }

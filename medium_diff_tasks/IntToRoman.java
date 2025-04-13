@@ -4,8 +4,10 @@ public class IntToRoman {
     public String intToRoman(int num) {
 
         StringBuilder sb = new StringBuilder();
-        sb.append("M".repeat(Math.max(0, num / 1000)));
-
+        int thousands = num / 1000;
+        for (int i = 0; i < thousands; i++) {
+            sb.append("M");
+        }
         int hundreds = (num % 1000) / 100;
         int tens = (num % 100) / 10;
         int nums = num % 10;
